@@ -1,0 +1,8 @@
+hi: ["Hello! How can I assist you today?","Hi there! What can I do for you?","Hey! How is it going?"],
+hello: ["Hello! How can I help you?","Hi! What is up?","Hey there! Need any help?"],
+how are you: ["I am just a bot, but I am here and ready to help!","I am great thank you! How about you?","I am here to assist you. How can I make your day better?"],
+how are u: ["I am just a bot, but I am here and ready to help!","I am great thank you! How about you?","I am here to assist you. How can I make your day better?"],
+goodbye: ["Goodbye! Have a great day!","See you later! Take care!","Bye! If you need anything, I am here."],
+bye: ["Bye! Have a nice day!","See you next time!","Take care! Bye!"],
+i need help: ["Of course! What do you need help with?","I am here to assist. Please tell me what you need.","Sure! Let me know what you need help with and I will do my best."]
+
