@@ -6,7 +6,7 @@ theta_0=0 #w
 theta_1=0 #b
 alpha=0.01
 num_iteration=100
-sse_values=[] #store some squared error values for plotting
+sse_values=[] #store sum square error values for plotting
 #Gradient descient
 for i in range(num_iteration):
     #compute predictions
