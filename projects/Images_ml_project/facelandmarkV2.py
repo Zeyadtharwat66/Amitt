@@ -18,6 +18,6 @@ if results.multi_face_landmarks:
             connections=None,
             landmark_drawing_spec=mp_drawing.DrawingSpec(color=(255, 255, 255), thickness=-3 , circle_radius=3)
         )
-cv2.imshow("Face Landmarks (Only Points, No Connections)", image)
+cv2.imshow("Face Landmarks", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
