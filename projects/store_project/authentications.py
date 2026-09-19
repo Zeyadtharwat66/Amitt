@@ -1,24 +1,18 @@
+from pathlib import Path
 import random
 
+ACCOUNTS_FILE = Path(__file__).with_name("Accounts.txt")
 
 class authentications:
     z = {}
 
     def save_in_file(cls):
-        x = open(
-            r"C:\Users\HP\Desktop\Amit\Advanced_machine_learning_amit\materials\Python_for_ml\projects\store_project\Accounts.txt",
-            "w",
-        )
-        x.write(str(cls.z))
+        with ACCOUNTS_FILE.open("w", encoding="utf-8") as x:
+            x.write(str(cls.z))
 
     def check_account_from_file(cls):
-        x = open(
-            r"C:\Users\HP\Desktop\Amit\Advanced_machine_learning_amit\materials\Python_for_ml\projects\store_project\Accounts.txt",
-            "r",
-        )
-        readable = (
-            x.read().replace("{", "").replace("}", "").replace("'", "").split(", ")
-        )
+        with ACCOUNTS_FILE.open("r", encoding="utf-8") as x:
+            readable = x.read().replace("{", "").replace("}", "").replace("'", "").split(", ")
         return readable
 
     def signup(cls, user, password):
@@ -36,8 +30,7 @@ class authentications:
             check = int(input("Enter the Verification Code : "))
             if check == ver:
                 return True
-            else:
-                return False
+            return False
 
     def login(cls, user, password):
         checking = cls.check_account_from_file()
@@ -45,10 +38,7 @@ class authentications:
         for i in checking:
             mail = i[0 : i.index(":")]
             accounts[mail] = i[i.index(":") + 1 :]
-        if user in accounts:
-            if password in accounts[user]:
-                print(f"Welcome Back {user}")
-            else:
-                print("Incorrect Data. Try Again")
+        if user in accounts and password in accounts[user]:
+            print(f"Welcome Back {user}")
         else:
             print("Incorrect Data. Try Again")
